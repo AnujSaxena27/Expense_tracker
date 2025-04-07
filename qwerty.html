@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="qwerty2.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Expense Tracker</h2>
+        <form id="expenseForm">
+            <label>Description:</label>
+            <input type="text" id="description" required>
+
+            <label>Category:</label>
+            <select id="category">
+                <option>Food</option>
+                <option>Transport</option>
+                <option>Entertainment</option>
+                <option>Bills</option>
+                <option>Others</option>
+            </select>
+
+            <label>Amount:</label>
+            <input type="number" id="amount" step="0.01" required>
+
+            <label>Currency:</label>
+            <select id="currency">
+                <option>USD</option>
+                <option>EUR</option>
+                <option>GBP</option>
+                <option>INR</option>
+                <option>JPY</option>
+            </select>
+
+            <label>Conversion Rate:</label>
+            <input type="number" id="conversionRate" step="0.01" required>
+
+            <button type="button" onclick="addExpense()">Add Expense</button>
+        </form>
+        <h3>Expenses</h3>
+        <table id="expensesTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Amount (USD)</th>
+                    <th>Currency</th>
+                    <th>Original Amount</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody id="expensesBody"></tbody>
+        </table>
+    </div>
+    <script src="qwerty1.js"></script>
+</body>
+</html>
